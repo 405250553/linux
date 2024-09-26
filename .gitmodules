@@ -1,3 +1,0 @@
-[submodule "drivers/net/wireless/esp8089"]
-	path = drivers/net/wireless/esp8089
-	url = https://github.com/Lichee-Pi/esp8089
