@@ -20,7 +20,8 @@ obj-$(CONFIG_WLAN_VENDOR_TI) += ti/
 obj-$(CONFIG_WLAN_VENDOR_ZYDAS) += zydas/
 obj-$(CONFIG_WLAN_VENDOR_QUANTENNA) += quantenna/
 #add for esp8089  driver
-obj-$(CONFIG_ESP8089) += esp8089/ 
+obj-$(CONFIG_ESP8089) += esp8089/
+
 
 # 16-bit wireless PCMCIA client drivers
 obj-$(CONFIG_PCMCIA_RAYCS)	+= ray_cs.o

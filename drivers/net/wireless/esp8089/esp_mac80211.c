@@ -389,7 +389,7 @@ static bool beacon_tim_alter(struct sk_buff *beacon)
 
 unsigned long init_jiffies;
 unsigned long cycle_beacon_count;
-static void drv_handle_beacon(unsigned long data)
+static void drv_handle_beacon(struct timer_list* data)
 {
 	struct ieee80211_vif *vif = (struct ieee80211_vif *) data;
 	struct esp_vif *evif = (struct esp_vif *) vif->drv_priv;

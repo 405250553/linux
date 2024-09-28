@@ -17,6 +17,7 @@ struct timer_list {
 	unsigned long		expires;
 	void			(*function)(struct timer_list *);
 	u32			flags;
+	unsigned long data;
 
 #ifdef CONFIG_LOCKDEP
 	struct lockdep_map	lockdep_map;
@@ -115,6 +116,9 @@ static inline void init_timer_on_stack_key(struct timer_list *timer,
 #define __init_timer_on_stack(_timer, _fn, _flags)			\
 	init_timer_on_stack_key((_timer), (_fn), (_flags), NULL, NULL)
 #endif
+
+#define init_timer(timer)				\
+	__init_timer((timer),NULL,0)
 
 /**
  * timer_setup - prepare a timer for first use
